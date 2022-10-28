@@ -1,7 +1,6 @@
+<!-- Dynamic Menu -->
 <nav>
-    <a routerLink="/about">About</a>
-    |
-    <a routerLink="/home">Home</a>
-    |
-    <a routerLink="/support">Support</a>
+    <ul>
+        <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
+    </ul>
 </nav>
