@@ -1,6 +1,9 @@
 <!-- Dynamic Menu -->
 <nav>
     <ul>
-        <app-menuitem *ngFor="let m of menus" [menu]="m"></app-menuitem>
+        <ng-container *ngFor="let m of menus">
+            <!-- <app-menusuper [menu]="m" #ngIf="m.route=="/abc"></app-menusuper>  an example of how you can change up your menu -->
+            <app-menuitem  [menu]="m"></app-menuitem>    
+        </ng-container>
     </ul>
 </nav>
